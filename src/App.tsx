@@ -1,40 +1,33 @@
-import React from 'react';
+import ProfileCard from './components/ProfileCard';
 
 function App() {
+  return (
+    /* CSS for manage profile*/
+    <div className="flex flex-wrap items-center justify-center gap-8 min-h-screen bg-gray-100 p-10">
+      
+      {/* First Profile */}
+      <ProfileCard 
+        name="Surakshya Khatri"
+        role="Frontend Web Developer"
+        image="/my-photo.jpg" 
+      />
 
-  const myImage = "/my-photo.jpg";
+      {/* Second Profile */}
+      <ProfileCard 
+        name="Kranti Pariyar"
+        role="UI/UX Designer"
+        image="friend1.jpg" 
+      />
 
- return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      {/* Main Card Container */}
-      <div className="max-w-sm w-full bg-white rounded-2xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105">
+      {/* Third Profile */}
+      <ProfileCard 
+        name="Prabin Basnet"
+        role="Backend Developer"
+        image="friend2.jpg" 
+      />
 
-        {/* Profile Image */}
-        <div className="flex justify-center pt-8">
-          <img
-            className="w-32 h-32 rounded-full object-cover border-4 border-indigo-500 p-1"
-            src={myImage}
-            alt="My Profile"
-          />
-        </div>
-
-        {/* Text Content */}
-        <div className="p-6 text-center">
-          <h2 className="text-2xl font-bold text-gray-800 tracking-tight">
-            Surakshya Khatri
-          </h2>
-          <p className="text-indigo-600 font-medium mt-1">
-           Frontend Web Developer
-          </p>
-
-        </div>
-
-        {/* Decorate Bottom CSS*/}
-        <div className="h-2 bg-indigo-600 w-full" />
-      </div>
     </div>
   );
+}
 
- 
-};
 export default App;
